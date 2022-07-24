@@ -17,6 +17,10 @@ app = Flask(__name__) # init Flask web server
 
 CORS(app)
 
+@app.route('/health')
+def healthCheck():
+    return "OK"
+
 @app.route('/', methods=['POST']) # every time person hits url, run respondWithData()
 def respondWithData(): # add function for responding
     print(request.get_json())
