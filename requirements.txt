@@ -3,3 +3,4 @@ requests
 termcolor
 flask
 flask_cors
+gunicorn
